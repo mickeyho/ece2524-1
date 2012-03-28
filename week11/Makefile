@@ -15,5 +15,7 @@ main: ${OBJ}
 	 	  -e '/^$$/ d' -e 's/$$/ :/' < $*.P >> $*.d; \
 	  rm -f $*.P
 
+archive:
+	tar cvzf ProjArchive.tar.gz *.cpp *.h Makefile 
 clean:
 	-rm *.o *.d *~
